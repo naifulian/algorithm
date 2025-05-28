@@ -1,10 +1,8 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
 
-
-void qsort(vector<int>& arr, int l, int r) {
+void qsort(std::vector<int>& arr, int l, int r) {
 	if(l >= r) return;
 	int head = l, tail = r, stand = arr[l];
 	while(head < tail) {
@@ -25,16 +23,16 @@ void qsort(vector<int>& arr, int l, int r) {
 	
 }
 
-void print_arr(const vector<int>& arr) {
+void print_arr(const std::vector<int>& arr) {
 	for(auto val : arr) {
-		cout << val << " ";
+		std::cout << val << " ";
 	}
-	cout << endl;
+	std::cout << std::endl;
 }
 
 int main() {
 
-	vector<int> arr = { 4, 1 , 5 , 6, 7, 9, 4, 2, 11, 5, 8};
+	std::vector<int> arr = { 4, 1 , 5 , 6, 7, 9, 4, 2, 11, 5, 8};
 	print_arr(arr);
 	qsort(arr, 0, arr.size() - 1);
 	print_arr(arr);
