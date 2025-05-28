@@ -1,7 +1,8 @@
 #include <iostream>
 #include <vector>
 
-// 这是来自 Linux 上的修改
+
+// windows先修改，然后 Linux 修改
 void qsort(std::vector<int>& arr, int l, int r) {
 	if(l >= r) return;
 	int head = l, tail = r, stand = arr[l];
